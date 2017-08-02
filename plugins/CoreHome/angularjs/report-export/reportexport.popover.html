@@ -1,0 +1,23 @@
+<div class="report-export-popover row">
+
+    <h1>{{ 'General_Export'|translate }} <span ng-bind="report-title"></span></h1>
+
+    <div class="col l6">
+        <div piwik-field uicontrol="select" name="format"
+             title="Export format"
+             value="CSV"
+             full-width="true"
+             options='{"CSV": "CSV","TSV":"TSV (Excel)","XML":"XML","JSON":"Json","PHP":"PHP"}'>
+        </div>
+    </div>
+
+    <div class="col l6">
+        <div piwik-field uicontrol="number" name="filter_limit"
+             title="Row limit"
+             min="-1"
+             full-width="true"
+             value="100">
+        </div>
+    </div>
+
+</div>

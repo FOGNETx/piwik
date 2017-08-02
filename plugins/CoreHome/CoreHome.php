@@ -88,6 +88,7 @@ class CoreHome extends \Piwik\Plugin
         $stylesheets[] = "plugins/CoreHome/angularjs/quick-access/quick-access.directive.less";
         $stylesheets[] = "plugins/CoreHome/angularjs/selector/selector.directive.less";
         $stylesheets[] = "plugins/CoreHome/angularjs/reporting-page/reportingpage.directive.less";
+        $stylesheets[] = "plugins/CoreHome/angularjs/report-export/reportexport.popover.less";
         $stylesheets[] = "plugins/CoreHome/angularjs/widget-bydimension-container/widget-bydimension-container.directive.less";
         $stylesheets[] = "plugins/CoreHome/angularjs/progressbar/progressbar.directive.less";
     }
@@ -204,6 +205,9 @@ class CoreHome extends \Piwik\Plugin
 
         $jsFiles[] = "plugins/CoreHome/angularjs/popover-handler/popover-handler.directive.js";
 
+        $jsFiles[] = "plugins/CoreHome/angularjs/report-export/reportexport.directive.js";
+        $jsFiles[] = "plugins/CoreHome/angularjs/report-export/reportexport.controller.js";
+
         $jsFiles[] = "plugins/CoreHome/angularjs/reporting-page/reportingpage.controller.js";
         $jsFiles[] = "plugins/CoreHome/angularjs/reporting-page/reportingpage-model.js";
         $jsFiles[] = "plugins/CoreHome/angularjs/reporting-page/reportingpage.directive.js";
@@ -247,6 +251,7 @@ class CoreHome extends \Piwik\Plugin
 
     public function getClientSideTranslationKeys(&$translationKeys)
     {
+        $translationKeys[] = 'General_Export';
         $translationKeys[] = 'General_InvalidDateRange';
         $translationKeys[] = 'General_Loading';
         $translationKeys[] = 'General_Show';

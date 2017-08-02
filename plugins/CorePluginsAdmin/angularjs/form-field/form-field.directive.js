@@ -132,6 +132,7 @@
                         || hasUiControl(field, 'textarea')
                         || hasUiControl(field, 'password')
                         || hasUiControl(field, 'email')
+                        || hasUiControl(field, 'number')
                         || hasUiControl(field, 'url')
                         || hasUiControl(field, 'search')) {
                     Materialize.updateTextFields();
@@ -148,7 +149,7 @@
 
         function getTemplate(field) {
             var control = field.uiControl;
-            if (control === 'password' || control === 'url' || control === 'search' || control === 'email') {
+            if (control === 'password' || control === 'url' || control === 'search' || control === 'email' || control === 'number') {
                 control = 'text'; // we use same template for text and password both
             }
 

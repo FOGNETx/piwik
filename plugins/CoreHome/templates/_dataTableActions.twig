@@ -46,9 +46,9 @@
             {{ visualizationIcons|raw }}
         {% endif %}
 
-        <a class='dropdown-button dataTableAction activateExportSelection'
+        <a class='dropdown-button dataTableAction activateExportSelection' piwik-report-export report-title="Bal"
            href='javascript:;' title="{{ 'General_ExportThisReport'|translate|e('html_attr') }}"
-           data-activates='dropdownExport{{ randomIdForDropdown }}'><span class="icon-export"></span></a>
+           ><span class="icon-export"></span></a>
 
         {% if isPluginLoaded('Annotations') and not properties.hide_annotations_view %}
             <a class='dataTableAction annotationView'
@@ -68,7 +68,7 @@
             </a>
         {% endif %}
 
-        <ul id='dropdownExport{{ randomIdForDropdown }}' class='dropdown-content exportToFormatItems'>
+        <!--ul id='dropdownExport{{ randomIdForDropdown }}' class='dropdown-content exportToFormatItems'>
             {% set requestParams = properties.request_parameters_to_modify|json_encode %}
             <li><a target="_blank" requestParams="{{ requestParams|e('html_attr') }}" methodToCall="{{ properties.apiMethodToRequestDataTable }}" format="CSV" filter_limit="{{ properties.filter_limit }}">CSV</a></li>
             <li><a target="_blank" requestParams="{{ requestParams|e('html_attr') }}" methodToCall="{{ properties.apiMethodToRequestDataTable }}" format="TSV" filter_limit="{{ properties.filter_limit }}">TSV (Excel)</a></li>
@@ -88,7 +88,7 @@
                     </a>
                 </li>
             {% endif %}
-        </ul>
+        </ul-->
         <ul id='dropdownConfigure{{ randomIdForDropdown }}' class='dropdown-content tableConfiguration'>
             {% if properties.show_flatten_table %}
                 {% if clientSideParameters.flat is defined and clientSideParameters.flat == 1 %}
